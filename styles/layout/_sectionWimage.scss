@@ -1,0 +1,83 @@
+@use "../abstracts/index" as *;
+
+.SectionWimage{
+    &__row{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        &--imageWrapper{
+            max-width: 550px;
+            img{
+                max-width: 100%;
+            }
+        }
+
+        &--contentWrapper{
+            max-width: 620px;
+
+            p.p-18{
+                margin: 12px 0 36px;
+                @include min-width(medium){
+                    margin: 24px 0 72px;
+                }
+            }
+        }
+    }
+
+    // .rowPosition-right{
+    //     flex-direction: column;
+    //     @include min-width(medium){
+    //         flex-direction: row-reverse;
+    //     }
+    // }
+
+    // .rowPosition-left{
+    //     flex-direction: column;
+    //     @include min-width(medium){
+    //         flex-direction: row;
+    //     }
+    // }
+}
+
+.SectionWTextOnly{
+    &__row{
+        display: flex;
+        gap: 20px; 
+
+        @include min-width(medium){
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px; 
+        }
+
+        &--col{
+            &__heading{
+                @include min-width(medium){
+                    max-width: 500px;
+                }
+            }
+            &__text{
+                @include min-width(medium){
+                    max-width: 480px;
+                }
+            }
+        }
+    }
+
+}
+
+
+.rowPosition-right{
+    flex-direction: column;
+    @include min-width(medium){
+        flex-direction: row-reverse;
+    }
+}
+
+.rowPosition-left{
+    flex-direction: column;
+    @include min-width(medium){
+        flex-direction: row;
+    }
+}

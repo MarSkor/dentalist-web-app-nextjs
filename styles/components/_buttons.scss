@@ -1,0 +1,121 @@
+@use "../base/typography" as *;
+@use "../abstracts/index" as *;
+
+// GLOBAL STYLE
+button{
+    white-space: nowrap;
+    font-family: 'EudoxusSans';
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    text-align: center;
+}
+
+
+
+// VARIANT
+.btn--primary{
+    background-color: $purple;
+    color: $white;
+}
+
+
+.btn--secondary{
+    border: 1px solid $purple;
+    background-color: $purple-light;
+    color: $purple;
+}
+
+// SIZE
+
+.btn--sm {
+    font-size: 12px;
+    padding: 4px 6px;
+}
+  
+.btn--md {
+    font-size: 14px;
+    padding: 15px 25px;
+}
+  
+.btn--lg {
+    font-size: 16px;
+    padding: 20px 39px;
+}
+
+
+// responsive
+
+.btn-full-width{
+    @include max-width(mx-medium){
+        button{
+            width: 100%;
+        }
+    }
+}
+
+
+
+// BUTTON GROUPS
+
+.button-groupx{
+    display: flex;
+
+    .label-12{
+        font-weight: 700;
+        color: $purple;
+        margin-bottom: 4px;
+    }
+
+    .p-16{
+        font-weight: 700;
+        color: $darkblue;
+
+    }
+
+    button{
+        @include max-width(mx-medium){
+          width: 100%;
+        }
+    }
+}
+
+.button-groupx--btn-right{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include min-width(medium){
+        justify-content: space-between
+    }
+    
+    &__wrapper{
+        @include flex-center;
+        
+        &--text{
+            margin-left: 16px;
+        }
+
+        @include max-width(mx-medium){
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.button-groupx--btn-left{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    gap: 40px;
+    
+    &__wrapper{
+        @include flex-center;
+
+        &--text{
+            margin-left: 16px;
+        }
+    }
+}
+

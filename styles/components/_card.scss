@@ -1,0 +1,215 @@
+@use "../abstracts/index" as *;
+
+// various card groups
+.card-group, .card-group-wicony{
+    display: flex;
+    flex-wrap: wrap;
+    @include min-width(medium){
+        justify-content: space-between;
+    }
+}
+
+.card-group {
+    justify-content: center;
+}
+
+.card-group-wicony{
+    justify-content: start;
+}
+
+
+
+// ------------------------------------------------
+// GLOBAL STYLES (all cards)
+
+.card{
+    border-radius: $border-radius-m;
+}
+
+
+// ------------------------------------------------
+// VARIATIONS
+
+// vertical card
+.card--wicon-y{
+    border: 1px solid $darkblueop10;
+    background-color: $white;
+    height: 360px;
+    margin: 1rem 0;
+    transition: all 350ms ease-in-out;
+    
+    @include min-width(medium){
+        width: 290px;
+    }
+
+    &__icon{
+        border-radius: $border-radius-m;
+        height: 200px;
+        max-width:100%;
+        max-height: 100%;
+        margin: 16px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        padding: 10px;
+    }
+
+    &__body{
+        margin: 20px 16px 0;
+        text-align: center;
+        h4{
+            margin: 0 0 8px;
+        }
+        p{
+            opacity: .7;
+        }
+    }
+
+    &:hover{
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+        box-shadow: $box-sh-sm;
+    }
+}
+
+.card--wicon-y:first-child{
+    .card--wicon-y__icon{
+        background-color: rgb(219, 239, 250);
+    }
+}
+.card--wicon-y:nth-child(2){
+    .card--wicon-y__icon{
+        background-color: rgb(219, 222, 250);
+    }
+}
+.card--wicon-y:nth-child(3){
+    .card--wicon-y__icon{
+        background-color: rgb(246, 219, 250);
+    }
+}
+.card--wicon-y:nth-child(4){
+    .card--wicon-y__icon{
+        background-color: rgb(250, 219, 226);
+    }
+}
+
+
+// horizontal card
+.card--wicon-x{
+    flex-direction: column;
+    max-width: 400px;
+    height: 96px;
+    width: 100%;
+    
+    @include min-width(medium){
+        flex-direction: row;
+    };
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+    }
+
+    &__body{
+        margin-left: 20px;
+    }
+
+    &__icon{
+        img{
+            width: 58px;
+            height: 58px;
+            @include min-width(medium){
+                width: 96px;
+                height: 96px;
+            }
+        }
+    }
+}
+
+
+// ------------------------------------------------
+// BLOG CARD
+
+.blogcard{
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    max-height: 480px;
+    height:  480px;
+    border: 1px solid $darkblueop10;
+    border-radius: $border-radius-m;
+    padding: 16px;
+    transition: all 350ms ease-in-out;
+
+    &__image-wrap{
+        position: relative;
+        margin-bottom: 24px;
+        img{
+            width: 100%;
+            background-size: cover;
+        }
+    }
+    &__date{
+        background-color: $white;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+        @include flex-col-center;
+        justify-content: center;
+        .p-18{
+            font-weight: 700;
+        }
+        .label-14{
+            font-weight: 700;
+            color: $darkblueop60;
+        }
+    }
+    &__content{
+        h5{
+            margin: 8px 0 12px;
+        }
+        .p-16{
+            opacity: 0.7;
+            margin-top: 12px;
+        }
+    }
+
+    &:hover{
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+        box-shadow: $box-sh-sm;
+    }
+}
+
+.blogpostrow__wrapper--blog-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin: 40px 0;
+      
+    @include min-width(xlarge){
+        margin: 80px 0;
+        justify-content: space-between;
+    }
+
+    & > *{
+        margin: 5px 5px;
+    }
+}
+
+// ------------------------------------------------
+// RESPONSIVE
+
+@media screen and (min-width: 40em){
+    .card--wicon{
+        max-width: calc(50% -  1em);
+    }
+}
+
+@media screen and (min-width: 68.75em){
+    .card--wicon{
+        max-width: calc(25% - 1em);
+    }
+}

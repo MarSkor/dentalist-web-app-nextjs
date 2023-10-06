@@ -1,0 +1,42 @@
+{
+  "name": "dentalist-web-app-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.5.2",
+    "framer-motion": "^10.16.4",
+    "gray-matter": "^4.0.3",
+    "next": "13.5.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-responsive-masonry": "^2.1.7",
+    "react-select": "^5.7.7"
+  },
+  "devDependencies": {
+    "iconoir-react": "^6.11.0",
+    "prettier": "^3.0.3",
+    "sass": "^1.68.0"
+  },
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended"
+  ],
+  "globals": {
+    "React": "readonly"
+  },
+  "rules": {
+    "no-unused-vars": "warn"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": "please-use-npm"
+  }
+}

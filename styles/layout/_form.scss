@@ -1,0 +1,32 @@
+@use "../abstracts/index" as *;
+
+.form{
+    margin-top: 34px;
+
+    &__group{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        @include min-width(medium){
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+        }
+    }
+
+    &__field{
+        @include flex-column;
+        width: 100%;
+        margin-bottom: 24px;
+
+        @include max-width(medium){
+            width: 290px;
+        }
+
+        &--label{
+            @include form-label;
+            margin-bottom: 12px;
+        }
+    }
+}

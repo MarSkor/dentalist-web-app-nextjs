@@ -1,0 +1,12 @@
+@use "../abstracts/index" as *;
+
+.form-input{
+    @include input-styles;
+    @include input-default;
+}
+
+.form-textarea{
+    resize: none;
+    @include input-styles;
+    @include textarea-default;
+}

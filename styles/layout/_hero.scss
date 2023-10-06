@@ -1,0 +1,41 @@
+@use "../abstracts/index" as *;
+
+.hero{
+    @include full-res-flex;
+    @include min-width(medium){
+        height: 700px;
+    }
+
+    &__content{
+        padding: 20px 16px;
+        @include flex-col-jus-center;
+        @include min-width(medium){
+            padding: 0 56px;
+        }
+
+        &--heading{
+            @include flex-col-jus-center;
+            p{
+                max-width: $text-width-550;
+                margin: 16px 0 36px;
+                @include min-width(medium){
+                    margin: 32px 0 72px
+                }
+            }
+        }
+    }
+
+    &__heroimg{
+        @include flex-column;
+        justify-content: center;
+        @include min-width(large){
+            justify-content: flex-end;
+        }
+
+        img{
+            margin-bottom: 0;
+            width: 100%;
+        }
+    }
+}
+

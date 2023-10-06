@@ -1,0 +1,53 @@
+    // colors
+    $purple-light: rgb(238, 236, 248);
+    $purple: rgb(80, 57, 172);
+    $purpleop: rgba(87, 62, 187, 0.1);
+    $white: rgb(248, 248, 248);
+    $whiteop60: rgba(248, 248, 248, 0.6);
+    $darkblue: rgb(24, 25, 68);
+    $darkestblue: rgb(4, 20, 52);
+    $darkblueop10: rgba(24, 25, 68, 0.05);
+    $darkblueop40: rgba(24, 25, 69, 0.40);
+    $darkblueop60: rgba(24, 25, 69, 0.60);
+    $darkblueop70: rgba(24, 25, 68, 0.70);
+    $lightblue: rgb(219, 239, 250);
+    $lightbluebg: rgb(217, 235, 250);
+    $lightblue_v2: rgb(219, 222, 250);
+
+
+    // breakpoints
+    $breakpoint-small: 576px;
+    $breakpoint-medium: 970px;
+    $breakpoint-large: 1280px;
+    $breakpoint-extra-large: 1392px;
+
+
+    // containers
+    $container-s: 870px;
+    $container: $breakpoint-large;
+    $container-lg: $breakpoint-extra-large;
+
+    
+    // radius
+    $border-radius-xs: 16px;
+    $border-radius-s: 18px;
+    $border-radius-m: 32px;
+    $border-radius-lg: 42px;
+    
+
+    // spacing
+    $margin-y-20: 20px;
+    $margin-y-50: 50px;
+    $margin-y-90: 90px;
+    $margin-100: 100px;
+    $margin-y-150: 150px;
+    $margin-y-200: 200px;
+   
+
+    // various
+    $text-width-550: 550px;
+
+
+    // shadows
+    $box-sh-sm: 0px 54px 76px 0px rgba(24,25,69,0.08);
+    $box-sh-nav: 0px 4px 10px 0px rgba(178, 178, 178, 0.189);

@@ -1,0 +1,103 @@
+@use "../abstracts/index" as *;
+
+.footer{
+    background-color: $darkestblue;
+    padding: 50px 16px;
+
+    .p-18,
+    .p-16,
+    .label-12{
+        color: $whiteop60;
+    }
+
+    .label-14{
+        color: $white;
+    }
+
+    &__row{
+        margin-top: 50px;
+        @include flex-column;
+        gap: 4vh;
+        justify-content: space-between;
+        @include min-width(medium){
+            flex-direction: row;
+        }
+    }
+
+    &__col{
+        &:first-child{
+            max-width: 510px;
+        }
+
+        &--info-group{
+            display: flex;
+            align-items: center;
+            margin: 16px 0;
+
+            img{
+                margin-right: 12px;
+            }
+
+            .p-18{
+                color: $white;
+                font-weight: 700;
+                line-height: 28px;
+                
+            }
+        }
+
+        &--logo{
+            margin-bottom: 16px
+        }
+        
+        &--content{
+
+
+            &__links{
+                @include flex-column;
+    
+                & > :not(p){
+                    margin: 12px 0;
+                }
+    
+                .label-14{
+                    text-decoration: none;
+                    font-weight: 700;
+                    line-height: 18px;
+                    
+                }
+            }
+    
+            &__social-media{
+                display: flex;
+                align-items: center;
+                margin-top: 24px;
+    
+                svg{
+                    color: $white;
+    
+                    &:nth-child(2){
+                        margin: 0 48px;
+                    }
+                }
+            }
+    
+            &:nth-child(2){
+                margin-top: 64px;
+            }
+        }
+    }
+
+    
+
+    &__row.copyright{
+        margin-top: 115px;
+        div > *{
+            &:first-child{
+                padding-right: 60px;
+            }
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}

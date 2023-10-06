@@ -1,0 +1,151 @@
+@use "./variables" as *;
+
+@mixin min-width($breakpoint) {
+    @if ($breakpoint == small) {
+      @media (min-width: $breakpoint-small) {
+        @content;
+      }
+    } 
+    @else if ($breakpoint == medium) {
+      @media (min-width: $breakpoint-medium) {
+        @content;
+      }
+    } 
+    @else if ($breakpoint == large) {
+      @media (min-width: $breakpoint-large) {
+        @content;
+      }
+    } 
+    @else if ($breakpoint == xlarge) {
+      @media (min-width: $breakpoint-extra-large) {
+        @content;
+      }
+    } 
+    @else {
+      @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
+    }
+  }
+  
+  @mixin max-width($breakpoint){
+    @if ($breakpoint == mx-small) {
+      @media (max-width: $breakpoint-small) {
+        @content;
+      }
+    } 
+    @else if ($breakpoint == mx-medium){
+      @media (max-width: $breakpoint-medium){
+        @content
+      }
+    }
+    @else if ($breakpoint == mx-large){
+      @media (max-width: $breakpoint-large){
+        @content
+      }
+    }
+  };
+
+
+
+
+// FLEX --------------------------
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-col-jus-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-center{
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-col-center{
+  align-items: center;
+  display: flex;
+  flex-direction: column
+}
+
+@mixin flex-jus-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin full-res-flex{
+  display: flex;
+  flex-direction: column;
+
+  @include min-width(medium){
+    flex-direction: row;
+  }
+}
+
+@mixin full-res-flex-xxl{
+  display: flex;
+  flex-direction: column;
+
+  @include min-width(large){
+    flex-direction: row;
+  }
+}
+
+
+
+// VARIOUS
+@mixin colorBackground{
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 18px;
+  @include min-width(medium){
+    border-radius: 48px;
+  }
+}
+
+@mixin imageBackground{
+  background-size: cover;
+  background-repeat: no-repeat;
+  // position: relative;
+  width: 100%;
+  border-radius: 18px;
+  @include min-width(medium){
+    border-radius: 48px;
+  }
+}
+
+// FORM + INPUT STYLES
+@mixin input-styles{
+  height: var(--height);
+  border-radius: $border-radius-xs;
+  border: 1px solid $darkblueop40;
+  padding: 0 15px;
+}
+
+@mixin input-default{
+  --height: 60px;
+}
+
+@mixin textarea-default{
+  --height: 200px;
+  padding-top: 15px;
+}
+
+@mixin form-label{
+  font-size: clamp(0.75rem, 5vw, 0.875rem);
+  color: rgba(24, 25, 69, 0.6);
+  text-transform: uppercase;
+  font-weight: 700;
+}

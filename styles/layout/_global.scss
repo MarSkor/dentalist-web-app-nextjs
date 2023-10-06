@@ -1,0 +1,48 @@
+@use "../abstracts/index" as *;
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family:'EudoxusSans', Arial, Helvetica, sans-serif;
+    background-color: $white;
+}
+
+main {
+    margin-top: 100px;
+    flex-grow: 1;
+}
+
+.section, .header{
+    padding: 0 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $margin-y-150; // keep or remove?
+    width: 100%;
+}
+
+// container variants
+.section--sm{
+    max-width: $breakpoint-small;
+}
+
+.section--md{
+    max-width: $breakpoint-medium;
+}
+
+.section--lg{
+    max-width: $breakpoint-large;
+}
+
+.section--xxl{
+    max-width: $breakpoint-extra-large;
+}
+
+
+// various
+.line{
+    height: 4px;
+    width: 120px;
+    background: $purple;
+    border-radius: 99px;
+    margin: 0 auto;
+}
