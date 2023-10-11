@@ -17,7 +17,7 @@ const Features = () => {
             <Card 
             variant="wicon-x"
             key={item.id}
-            icon={item.icon}
+            image={item.icon}
             title={item.title}
             text={item.text}
             />

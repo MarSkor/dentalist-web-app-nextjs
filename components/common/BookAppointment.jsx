@@ -1,6 +1,5 @@
-import Image from "next/image"
 import { Container } from "../layout"
-import { Button, DropDownMenu } from "../elements"
+import { DropDownMenu } from "../elements"
 import FormInput, { FormTextArea } from "../elements/form/FormInput"
 import { FORM_SERVICES, FORM_DEPARTMENTS } from "@/utils/data"
 import { CTAgroup } from "."

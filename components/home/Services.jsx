@@ -14,12 +14,12 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="card-group">
+        <div className="card-group-grid card-group-grid_4">
           {HOME_SERVICES.map((item, index) => (
             <Card 
             variant="wicon-y"
             key={index}
-            icon={item.icon}
+            image={item.icon}
             title={item.title}
             text={item.text}
             />

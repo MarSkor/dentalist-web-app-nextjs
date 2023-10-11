@@ -1,5 +1,6 @@
 
 const Hero = (props) => {
+  
   return (
     <div className="hero">
       <div className="hero__content wrapper">
@@ -7,12 +8,12 @@ const Hero = (props) => {
           <h1>{props.heading}</h1>
           <p className="p-18">{props.subtext}</p>
         </div>
-        {props.ctagroup && props.ctagroup}
+        {props.ctaGroup && props.ctaGroup}
       </div>
 
       {props.image && (
-        <div className='hero__heroimg'>
-          <img src={props.image}  alt="header image" loading="lazy"/>
+        <div className={`hero__heroimgwrap hero__heroimgwrap--${props.imgVariant}`}>
+          <img className={`heroimg heroimg--${props.imgSize}`} src={props.image}  alt="header image" loading="lazy"/>
         </div>
       )}
     </div>

@@ -1,5 +1,33 @@
 @use "../abstracts/index" as *;
 
+
+// global hero styles
+.hero_container{
+    @include imageBackground;
+}
+
+// page specific hero styles
+.home__hero{
+    background-image: url(/assets/home/hero/Hero__background.png);
+    margin-bottom: $margin-y-150;
+
+    p{
+        font-weight: 500;
+        color: $darkblueop70;
+    }
+}
+
+.hero_container_text{
+    max-width: 860px;
+    text-align: center;
+    margin: 0 auto;
+    h3{
+        margin-bottom: 30px;
+    }
+}
+
+
+// the hero styles
 .hero{
     @include full-res-flex;
     @include min-width(medium){
@@ -25,17 +53,36 @@
         }
     }
 
-    &__heroimg{
+    &__heroimgwrap{
         @include flex-column;
-        justify-content: center;
-        @include min-width(large){
-            justify-content: flex-end;
+        padding: 0 16px 20px;
+        &--center, &--end{
+            img{
+                width: 100%;
+            }
         }
 
-        img{
-            margin-bottom: 0;
-            width: 100%;
+        // heroimage position
+        &--center{
+            justify-content: center;
+        }
+
+        &--end{
+            @include min-width(large){
+                justify-content: flex-end;
+            }
+
+            img{
+                margin-bottom: 0;
+            }
         }
     }
 }
 
+
+// hero imageSize variants
+.heroimg{
+    &--medium{
+        max-width: 620px;
+    }
+}

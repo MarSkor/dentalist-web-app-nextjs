@@ -17,7 +17,7 @@ export const SectionWTextOnly = (props) => {
 }
 
 
-const SectionWimageCol = (props) => {
+const SectionWRow = (props) => {
     
     // colPositions (placeholder name for now)
     // - image in left col and text in right col = left
@@ -44,4 +44,4 @@ const SectionWimageCol = (props) => {
   )
 }
 
-export default SectionWimageCol
+export default SectionWRow

@@ -42,6 +42,9 @@ button{
 .btn--lg {
     font-size: 16px;
     padding: 20px 39px;
+    @include min-width(medium){
+        max-width: 240px;
+    }
 }
 
 
@@ -57,7 +60,7 @@ button{
 
 
 
-// BUTTON GROUPS
+// BUTTON GROUPS (CTAgroup)
 
 .button-groupx{
     display: flex;
@@ -118,4 +121,3 @@ button{
         }
     }
 }
-

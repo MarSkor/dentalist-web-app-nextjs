@@ -1,3 +1,4 @@
+import React from "react"
 import { Button } from "../elements"
 import Image from "next/image"
 
@@ -7,8 +8,10 @@ const CTAgroup = (props) => {
   // variants
   // btn-left
   // btn-right
+  // btn-only
   
   const classNames =`button-groupx button-groupx--${props.variant}`
+
   return (
     <div className={classNames}>
       <div className={`button-groupx--${props.variant}__wrapper`} >
@@ -31,3 +34,4 @@ const CTAgroup = (props) => {
 }
 
 export default CTAgroup
+

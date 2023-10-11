@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Container } from "../layout"
-import { SectionWTextOnly } from "../common/SectionWimage"
+import { SectionWTextOnly } from "../common/SectionWRow"
 import { TESTIMONIALS } from "@/utils/data"
 import Image from "next/image";
 

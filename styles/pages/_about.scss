@@ -1,0 +1,76 @@
+@use "../abstracts/index" as *;
+
+.about_priority{
+    .SectionWimage__row--imageWrapper{
+        max-width: 620px;
+    }
+}
+
+
+section.about_safety{
+    margin-bottom: 300px;
+}
+
+.about_safety{
+    @include colorBackground;
+    background-color: rgb(219, 222, 250);
+
+    &__wrapper{
+        padding: 20px 0;
+        @include min-width(medium){
+            padding: 60px 16px;
+            height: 700px;
+        }
+
+        &--heading{
+            text-align: center;
+            
+            .p-18{
+                max-width: 510px;
+                margin: 0 auto;
+                padding-top: 24px;
+            }
+        }
+
+        &--imgwrap{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            height: 100%;
+            max-width: 840px;
+            margin: 0 auto;
+    
+            img{
+                width: 100%;
+                border-radius: $border-radius-m;
+                margin-top: 48px;
+                padding: 10px;
+    
+                @include min-width(medium){
+                    margin-top: 96px;
+                }
+            }
+        }
+    }
+}
+
+.about_team{
+    &__wrapper{
+       .about_team-card-wrap{
+        margin-top: 100px;
+       } 
+    }
+}
+
+.about_faq{
+    &__wrapper{
+        max-width: 919px;
+        margin: 0 auto;
+
+        &--accordion_wrap{
+            margin-top: 60px;
+        }
+    }
+
+    
+}

@@ -1,0 +1,57 @@
+@use "../abstracts/index" as *;
+
+.accordion{
+    &__item{
+        border-top: 1px solid #96A0B5;
+    }
+
+    &__title{
+        text-align: left;
+        display: flex;
+        // flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 8px;
+        cursor: pointer;
+        border: none;
+
+        h5{
+            width: 800px;
+        }
+    }
+    
+    &__control{
+        font-size: 20px;
+        color: #6D7D93;
+    }
+
+    &__answer_wrapper{
+        height: 0;
+        overflow: hidden;
+        transition: height ease 0.2s;
+    }
+
+    &__answer{        
+        padding: 20px 40px 20px 8px;
+        
+        p{
+            color: #565c68;
+        }
+    }
+
+    &__item.active &__title{
+        border-top: 4px solid #583FBC;
+    }
+
+    &__item.active &__control{
+        color: #583FBC;
+    }
+
+    &__item.active &__answer_wrapper{
+        margin-bottom: 20px;
+    }
+}
+
+
+  

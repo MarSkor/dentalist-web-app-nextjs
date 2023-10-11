@@ -22,6 +22,7 @@ export const BlogCard = (props) => {
 }
 
 
+
 const Card = (props) => {
   const classNames = `card card--${props.variant}`;
 
@@ -34,12 +35,10 @@ const Card = (props) => {
   return (
     <div className={classNames}>
       <div className={`card--${props.variant}__wrapper`}>
-        {props.icon && (
-          <div className={`card--${props.variant}__icon`}>
+        {props.image && (
+          <div className={`card--${props.variant}__image-wrap`}>
             <img
-            src={props.icon} 
-            // width={96} 
-            // height={96} 
+            src={props.image}  
             alt={props.title}
             loading="lazy"
             />
@@ -47,7 +46,7 @@ const Card = (props) => {
         )}
         <div className={`card--${props.variant}__body`}>
           <h4>{props.title}</h4>
-          <p className="p-16">{props.text}</p>
+          {props.text && <p className="p-16">{props.text}</p>}
         </div>
       </div>
     </div>

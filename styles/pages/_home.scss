@@ -23,7 +23,6 @@
 .services{
 
     &__heading{
-        
         &--text{
             @include full-res-flex;
             margin-bottom: $margin-y-20;
@@ -32,6 +31,7 @@
                 justify-content: space-between;
                 margin-bottom: $margin-y-90;
             }
+
             h2{
                 max-width: $text-width-550;
             }
@@ -44,6 +44,16 @@
                 }
             }
         }
+    }
+
+    .card-group{
+        justify-content: space-between;
+    }
+}
+
+.emergency{
+    .emergency_img{
+        // max-width: 550px;
     }
 }
 

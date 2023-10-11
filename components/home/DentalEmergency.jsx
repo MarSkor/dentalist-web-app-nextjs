@@ -1,11 +1,10 @@
 import { Container } from "../layout";
-import { SectionWimage } from "../common";
-
+import { SectionWRow } from "../common";
 
 const DentalEmergency = () => {
   return (
-    <Container tag="section" variant="lg">
-      <SectionWimage
+    <Container tag="section" variant="lg" className="emergency">
+      <SectionWRow
       colPosition="left"
       imageClass="emergency_img"
       label="Dental 24H Emergency"

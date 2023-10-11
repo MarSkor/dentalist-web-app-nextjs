@@ -1,8 +1,20 @@
-import React from 'react'
+import { 
+  HeroHeading, 
+  FAQ,
+  Priority,
+  Safety,
+  TheTeam
+} from "@/components/about"
 
 const About = () => {
   return (
-    <div>pjaa</div>
+    <>
+    <HeroHeading/>
+    <Priority/>
+    <Safety/>
+    <TheTeam/>
+    <FAQ/>
+    </>
   )
 }
 
