@@ -2,7 +2,7 @@
 
 .footer{
     background-color: $darkestblue;
-    padding: 50px 16px;
+    padding: 50px 0;
 
     .p-18,
     .p-16,
@@ -12,6 +12,13 @@
 
     .label-14{
         color: $white;
+    }
+
+    &__wrapper{
+        max-width: $breakpoint-large;
+        padding: 0 1rem;
+        margin: 0 auto;
+        width: 100%;
     }
 
     &__row{

@@ -7,7 +7,7 @@ import { Container } from "."
 const Footer = () => {
   return (
       <footer className="footer">
-        <Container variant="lg" tag="section">
+        <div className="footer__wrapper">
           <div className="footer__row">
             <div className="footer__col">
               <div className="footer__col--content">
@@ -62,7 +62,7 @@ const Footer = () => {
               <Link title="Privacy Policy" href={"#"}>Privacy Policy</Link>
             </div>
           </div>
-        </Container>
+        </div>
       </footer>
   )
 }
