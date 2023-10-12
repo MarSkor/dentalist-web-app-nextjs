@@ -219,3 +219,46 @@ export const ABOUT_US_ACCORDION_DATA = [
     answer: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corruptquam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos dolor ut sequi minus iste? Quas?`
   },
 ];
+
+
+export const SERVICES_SYMPTOMS = [
+  {
+    id: 1,
+    image: "assets/services/service_symptom_1.svg",
+    title: "Spontaneous pain",
+    text: "Spontaneous pain even when you're not eating or drinking"
+  },
+  {
+    id: 2,
+    image: "assets/services/service_symptom_2.svg",
+    title: "Middle night pain",
+    text: "Pain that wakes you up in the middle of the night"
+  },
+  {
+    id: 3,
+    image: "assets/services/service_symptom_3.svg",
+    title: "Extreme sensitivity",
+    text: "Extreme sensitivity to cold or heat when you drink or eat"
+  },
+  {
+    id: 4,
+    image: "assets/services/service_symptom_4.svg",
+    title: "Discoloration of tooth",
+    text: "Darkening or discoloration of a tooth"
+  },
+  {
+     id: 1,
+    image: "assets/services/service_symptom_5.svg",
+    title: "Tenderness in gums",
+    text: "From floss bosses to sweet tooths, every mouth is welcome."
+  },
+]
+
+export const GALLERY = [
+  { src: "/assets/services/service_gallery-img_1.png", alt:"image 1" },
+  { src: "/assets/services/service_gallery-img_2.png", alt:"image 2"},
+  { src: "/assets/services/service_gallery-img_3.png", alt:"image 3"},
+  { src: "/assets/services/service_gallery-img_4.png", lt:"image 4"},
+  { src: "/assets/services/service_gallery-img_5.png", alt:"image 5"},
+  { src: "/assets/services/service_gallery-img_6.png", alt:"image 6"}
+]

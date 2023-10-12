@@ -10,9 +10,9 @@ const Heading = (props) => {
 
   return (
     <div className={classNames}>
-        <p className="label-12">{props.label}</p>
-        <Title>{props.headingText}</Title>
-        {props.description && <p className="p-18">{props.description}</p>}
+      <p className="label-12">{props.label}</p>
+      <Title>{props.headingText}</Title>
+      {props.description && <p className="p-18">{props.description}</p>}
     </div>
   )
 }

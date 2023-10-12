@@ -3,7 +3,7 @@
 .home__hero{
     @include imageBackground;
     background-image: url(/assets/home/hero/Hero__background.png);
-    margin-bottom: $margin-y-150;
+    margin-bottom: $margin-150;
 
     p{
         font-weight: 500;
@@ -25,11 +25,11 @@
     &__heading{
         &--text{
             @include full-res-flex;
-            margin-bottom: $margin-y-20;
+            margin-bottom: $margin-20;
 
             @include min-width(medium){
                 justify-content: space-between;
-                margin-bottom: $margin-y-90;
+                margin-bottom: $margin-90;
             }
 
             h2{
@@ -48,12 +48,6 @@
 
     .card-group{
         justify-content: space-between;
-    }
-}
-
-.emergency{
-    .emergency_img{
-        // max-width: 550px;
     }
 }
 
@@ -150,7 +144,7 @@
 
 
 .testimonials{
-    background-color: #D9EBFA;
+    background-color: rgb(217, 235, 250);
     @include colorBackground;
 
     &__wrapper{

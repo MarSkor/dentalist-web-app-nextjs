@@ -2,7 +2,7 @@
 const Hero = (props) => {
   
   return (
-    <div className="hero">
+    <div className={`hero hero--${props.heroSize}`}>
       <div className="hero__content wrapper">
         <div className='hero__content--heading'>
           <h1>{props.heading}</h1>

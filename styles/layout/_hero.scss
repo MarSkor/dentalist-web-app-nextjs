@@ -9,7 +9,7 @@
 // page specific hero styles
 .home__hero{
     background-image: url(/assets/home/hero/Hero__background.png);
-    margin-bottom: $margin-y-150;
+    margin-bottom: $margin-150;
 
     p{
         font-weight: 500;
@@ -68,7 +68,7 @@
         }
 
         &--end{
-            @include min-width(large){
+            @include min-width(medium){
                 justify-content: flex-end;
             }
 
@@ -84,5 +84,18 @@
 .heroimg{
     &--medium{
         max-width: 620px;
+    }
+
+    &--large{
+        max-width: 730px;
+    }
+}
+
+
+// hero heroSize variants
+.hero--small{
+    @include min-width(medium){
+        height: 600px;
+        max-height: 100%;
     }
 }

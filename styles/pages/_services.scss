@@ -1,0 +1,52 @@
+@use "../abstracts/index" as *;
+
+.services__hero{
+    @include colorBackground;
+    background-color: rgb(219, 239, 250);
+
+    .hero__heroimgwrap{
+
+        img{
+            @include min-width(large){
+                position: absolute;
+                bottom: -100px;
+                right: 20px;
+            }
+        };
+    }
+    @include min-width(medium){
+        margin-bottom: 400px;
+    }
+}
+
+.services__symptoms{
+    @include colorBackground;
+    background-color: rgb(250, 219, 226);
+    
+
+    &--wrapper{
+        padding-bottom: $margin-100;
+        max-width: 990px;
+        margin: 0 auto;
+
+        .label-12{
+            padding-top: 100px;
+        }
+        .p-18{
+            max-width: 830px;
+            margin: 24px auto 100px;
+        }
+
+        .card-group-wicony{
+            max-width: 871px;
+            margin: 0 auto;
+
+            & > *{
+                margin-bottom: 50px;
+            }
+            @include min-width(medium){
+                justify-content: space-between;
+            }
+        }
+    }
+}

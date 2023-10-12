@@ -1,0 +1,25 @@
+@use "../abstracts/index" as *;
+
+.image-gallery {
+    margin-top: $margin-100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    & > *{
+        padding: 10px;
+    }
+  }
+
+.image-gallery__item {
+    max-width: 100%;
+    flex-grow: 1;
+    max-height: 300px;
+    object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+}
+  
+.image-gallery__item:hover {
+    transform: scale(1.05);
+}

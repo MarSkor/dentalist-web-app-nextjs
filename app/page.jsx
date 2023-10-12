@@ -4,10 +4,10 @@ import {
   Features, 
   Experts, 
   Testimonials, 
-  BookAppointment,
   HeroHeading,
   BlogPostRow
 } from '@/components/home'
+import { BookAppointment } from '@/components/common'
 
 export default function Home() {
   return (
