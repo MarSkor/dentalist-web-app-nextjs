@@ -24,7 +24,7 @@ const BookAppointment = () => {
             <p className="p-18">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual</p>
           </div>
           <div className="book-appointment__wrapper--form-wrap">
-          <form className="book-appointment-form form">
+          <form id="booking-form" className="book-appointment-form form">
              <div className="form__group">
                 <FormInput 
                   className="form-input"
