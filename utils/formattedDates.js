@@ -1,4 +1,3 @@
-// needed ?
 
 export const dateFix = (a) => {
     const date = new Date(a);
