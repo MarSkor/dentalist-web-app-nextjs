@@ -10,3 +10,33 @@
     @include input-styles;
     @include textarea-default;
 }
+
+.search-input{
+    &__wrapper{
+        display: flex;
+        position: relative; 
+        max-width: 440px;
+        
+
+        input{
+            @include input-styles;
+            @include input-default;
+            width: 100%;
+            font-size: clamp(14px, 3vw, 16px);
+            padding-right: 125px;
+            @include min-width(medium){
+                padding-right: 140px;
+            }
+        }
+
+        button{
+            position: absolute;
+            right: 7px;
+            top: 7px;
+            font-size: clamp(14px, 3vw, 16px);
+            @include min-width(medium){
+                top: 5px;
+            }
+        }
+    }
+}

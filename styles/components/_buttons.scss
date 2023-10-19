@@ -2,7 +2,7 @@
 @use "../abstracts/index" as *;
 
 // GLOBAL STYLE
-button{
+button, .btn{
     white-space: nowrap;
     font-family: 'EudoxusSans';
     font-weight: 700;
@@ -20,17 +20,39 @@ button{
     color: $white;
 }
 
-
 .btn--secondary{
     border: 1px solid $purple;
     background-color: $purple-light;
     color: $purple;
 }
 
+.btn--link{
+    background-color: $white;
+    color: $purple;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+
+    svg{
+        margin-left: 8px;
+    }
+}
+
+.btn--input{
+    display: flex;
+    align-items: center;
+    background-color: $purple;
+    color: $white;
+
+    svg{
+        margin-left: 8px;
+    }
+}
+
 // SIZE
 
 .btn--sm {
-    font-size: 12px;
+    // font-size: 12px;
     padding: 4px 6px;
 }
   
@@ -45,6 +67,10 @@ button{
     @include min-width(medium){
         max-width: 240px;
     }
+}
+
+.btn--md-input{
+    padding: 13px 18px;
 }
 
 
