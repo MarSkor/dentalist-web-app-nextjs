@@ -13,11 +13,9 @@ const NavItem = ({ href, text }) => {
   const isActive = pathname === href;
 
   return(
-    
-      <Link href={href} className={`nav__item ${isActive ? "active" : ""}`}>
-        <span>{text}</span>
-      </Link>
-    
+  <Link href={href} className={`nav__item ${isActive ? "active" : ""}`}>
+    <span>{text}</span>
+  </Link>
   )
 }
 
@@ -38,8 +36,6 @@ const Navbar = () => {
     window.addEventListener('scroll', navbarOnChange);
   })
 
-
-
   return (
     <nav className={navbarScroll ? 'nav nav__scroll' : 'nav'}>
       <div className="nav__container">
@@ -48,7 +44,7 @@ const Navbar = () => {
             <picture>
               <source media="(max-width: 969px)" srcSet="/assets/logo/logo_small.svg" loading="lazy"/>
               <source media="(min-width: 970px)" srcSet="/assets/logo/logo.svg" loading="lazy"/>
-              <img src="/asset/logo.svg" alt="logo" />
+              <img src="/asset/logo.svg" alt="logo" title="Back to homepage"/>
             </picture>
           </div>
         </Link>

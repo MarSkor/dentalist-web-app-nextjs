@@ -17,9 +17,9 @@ export const ImageGroup = ({children}) => {
 
 const HeroImage = ({ src, alt }) => {
   return (
-    <div className="mdx-hero-image">
-      <img loading='lazy' src={src} alt={alt} />
-    </div>
+    <figure className="mdx-hero-image-wrapper">
+      <img className="mdx-hero-image" loading='lazy' src={src} alt={alt} />
+    </figure>
   )
 }
 

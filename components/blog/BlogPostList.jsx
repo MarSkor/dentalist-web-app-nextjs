@@ -2,6 +2,8 @@ import { Container } from "../layout";
 import { getPostMetadata } from "@/lib/getPosts"
 import { BlogPost } from ".";
 import { Heading } from "../common";
+import { NextBreadcrumb } from "../elements/breadcrumb/NextBreadcrumb";
+import { Breadcrumb, BreadcrumbItem } from "../elements";
 
 const BlogPostList = () => {
   const blogPosts = getPostMetadata();

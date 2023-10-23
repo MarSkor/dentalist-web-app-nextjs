@@ -82,6 +82,13 @@
   align-items: center;
 }
 
+@mixin flex-space-center{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 @mixin full-res-flex{
   display: flex;
   flex-direction: column;

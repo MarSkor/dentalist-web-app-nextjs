@@ -1,9 +1,11 @@
-import React from 'react'
+import { Container } from "@/components/layout"
 
-const loading = () => {
+const Loading = () => {
   return (
-    <div>loading page...</div>
+    <Container tag="section" variant="lg">
+      <h3>loading page...</h3>
+    </Container>
   )
 }
 
-export default loading
+export default Loading

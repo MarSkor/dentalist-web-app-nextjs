@@ -1,8 +1,10 @@
-import React from 'react'
+import { Container } from "@/components/layout"
 
 const Loading = () => {
   return (
-    <div>loading post...</div>
+    <Container tag="section" variant="lg">
+      <h3>loading post...</h3>
+    </Container>
   )
 }
 

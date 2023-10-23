@@ -7,7 +7,7 @@ const LatestNews = () => {
     const blogPosts = getPostMetadata();
 
     return (
-      <Container tag="section" variant="lg" className="latest-news">
+      <Container tag="div" className="latest-news">
         <Heading 
         variant="center" 
         headingLevel="h2" 

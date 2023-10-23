@@ -1,12 +1,16 @@
-import { Container } from "@/components/layout"
-import { LatestNews } from "@/components/blog";
-import * as components from "@/components/mdx";
-import { Breadcrumb } from "@/components/elements";
-import Link from "next/link"
 import { notFound } from "next/navigation"
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import { Suspense } from "react";
+
+import { Container } from "@/components/layout"
+import { ArticleAuthor, ArticleTitle } from "@/components/article";
+import { LatestNews } from "@/components/blog";
+import * as components from "@/components/mdx";
+import { NextBreadcrumb } from "@/components/elements";
+
 import { getPostMetadata, getPostContent } from "@/lib/getPosts"
-import Loading from "../loading";
+import NotFound from "./not-found";
+
 
 export const generateStaticParams = async() => {
   const posts = getPostMetadata();
@@ -14,7 +18,6 @@ export const generateStaticParams = async() => {
     slug: post.slug
   }))
 }
-
 
 const Post = async({ params }) => {
   const posts = getPostMetadata();
@@ -29,19 +32,23 @@ const Post = async({ params }) => {
 
   return (
     <Container tag="section" variant="lg">
+        <Suspense fallback={<NotFound/>}>
+        {/* <NextBreadcrumb/> */}
         <article className="article article-wrapper">
-
-          <Breadcrumb />
-
-          <div className="article__meta">
-            <p className="label-12">{source.data.category}</p>
-            <h1>{source.data.title}</h1>
-            <p></p>
-            <div className="article__meta--author"></div>
-          </div>
-          
+          <header className="article__meta">
+              <ArticleTitle 
+              category={source.data.category} 
+              title={source.data.title}
+              />
+              <ArticleAuthor 
+              date={source.data.date} 
+              author={source.data.author} 
+              author_image={source.data.author_image}
+              />
+          </header>
           <MDXRemote source={source.content} components={components}/>
         </article>
+        </Suspense>
         
       <LatestNews/>
     </Container>

@@ -7,3 +7,4 @@ export { default as SearchInput } from "./searchInput/SearchInput";
 export { default as Pagination } from "./pagination/Pagination";
 export { default as Breadcrumb } from "./breadcrumb/Breadcrumb";
 export { default as BreadcrumbItem } from "./breadcrumb/BreadcrumbItem";
+export { default as NextBreadcrumb } from "./breadcrumb/NextBreadcrumb";

@@ -7,7 +7,7 @@
     font-style: normal;
 }
   
-h1, h2, h3, h4, h5, p{
+h1, h2, h3, h4, h5, p, .p-date{
     font-family:'EudoxusSans';
     color: $darkblue;
     /* minimum, preferred and maximum value */
@@ -15,54 +15,61 @@ h1, h2, h3, h4, h5, p{
 }
 
 h1{
-    --min: 2rem; /* minimum value */
+    --min: 1.75em; /* minimum value */
     --val: 5vw; /* preferred value = 5% viewport width */
-    --max: 4rem; /* maximum value */
+    --max: 3em; /* maximum value */
 }
 
 h2{
-    --min: 1.5rem;
+    --min: 1.5em;
     --val: 4vw;
-    --max: 3rem
+    --max: 2.375em
 }
 
 h3{ 
-    --min: 1.125rem;
+    --min: 1.125em;
     --val: 3vw;
-    --max: 2.25rem
+    --max: 2.25em;
 }
 
 h4{
-    --min: 1.125rem;
+    --min: 1.125em;
     --val: 3vw;
-    --max: 1.25rem;
+    --max: 1.25em;
 }
 
 h5{
-    --min: 1rem;
+    --min: 1em;
     --val: 3vw;
-    --max: 1.125rem;
+    --max: 1.125em;
 }
 
 p{
-    --min: 1rem;
+    --min: 1em;
     --val: 3vw;
-    --max: 1.125rem;
+    --max: 1.125em;
 }
 
 .p-18{
-    --min: 1rem;
+    --min: 1em;
     --val: 2.5vw;
-    --max: 1.125rem;
+    --max: 1.125em;
 }
 
 .p-16{
     font-weight: 500;
     line-height: 26px;
-    --min: 0.875rem;
+    --min: 0.875em;
     --val: 2.5vw;
-    --max: 1rem;
+    --max: 1em;
 
+}
+
+.p-date{
+    font-weight: 500;
+    --min: 1em;
+    --val: 3vw;
+    --max: 1em;
 }
 
 .label-12, .label-14{
@@ -70,11 +77,11 @@ p{
 }
 
 .label-14{
-    font-size: 0.875rem; 
+    font-size: 0.875em; 
 }
 
 .label-12{
-    font-size: 0.75rem; 
+    font-size: 0.75em; 
     color: $purple;
     font-weight: 700;
     text-transform: uppercase;

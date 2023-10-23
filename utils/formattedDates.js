@@ -16,3 +16,11 @@ export const monthFix = (a) => {
 
     return monthToFix
 }
+
+export const formattedDate = (date) => {
+    return new Intl.DateTimeFormat('en-GB', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+    }).format(new Date(date))
+}

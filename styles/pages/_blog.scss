@@ -1,11 +1,6 @@
 @use "../abstracts/index" as *;
 
 
-.article-wrapper{
-    max-width: 950px;
-    margin: 0 auto;
-}
-
 .blogpostcard--wrapper{
     display: flex;
     justify-content:center;
@@ -67,11 +62,11 @@
     }
     &__content{
         h5{
-            margin: 4px 0 12px;
+            margin: 4px 0 6px;
         }
+        
         .p-16{
             opacity: 0.7;
-            margin-top: 12px;
         }
 
         &--badge{
@@ -80,12 +75,19 @@
             padding: 4px 8px;
             text-align: center;
             border-radius: $border-radius-xs;
-            margin-bottom: 8px;
 
             p{
                 padding: 5px 10px;
                 margin-bottom: 0;
             }
+        }
+    }
+
+    &__content-extra{
+        margin-bottom: 12px;
+        @include flex-space-center;
+        .p-date{
+            color: $darkblueop60;
         }
     }
 
@@ -99,6 +101,35 @@
     margin-top: $margin-150;
 
     .heading--center{
-        margin-bottom: 70px;
+        margin-bottom: 35px;
+        @include min-width(medium){
+            margin-bottom: 70px;
+        }
+    }
+}
+
+
+// ARTICLE PAGE
+
+.article-wrapper{
+    max-width: 950px;
+    @include min-width(medium){
+        margin: 70px auto;
+    }
+}
+
+.article{
+    &__meta{
+
+        &--author{
+            margin: 32px 0;
+            @include flex-center;
+            img{
+                margin-right: 10px;
+            }
+            p{
+                color: $darkblueop60;
+            }
+        }
     }
 }
