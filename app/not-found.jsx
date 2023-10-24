@@ -1,6 +1,10 @@
+import { Container } from "@/components/layout"
+
 const notFoundPage = () => {
     return(
-        <h1>Page is not found</h1>
+        <Container tag="section" variant="lg">
+            <h1>Page is not found</h1>
+        </Container>
     )
 }
 

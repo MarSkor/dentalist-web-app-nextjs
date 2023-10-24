@@ -1,0 +1,43 @@
+@use "../abstracts/index" as *;
+
+.breadcrumb{
+    max-width: 950px;
+    margin: 0 auto;
+
+    &__list{
+        list-style: none;
+        padding-inline-start: 0;
+        @include flex-center;
+        flex-wrap: wrap;
+        height: auto;
+
+        &--list-item-link{
+            text-decoration: none;
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+            
+        }
+
+        &--list-item{
+            font-weight: 500;
+        }
+    }
+}
+
+.breadcrumb-state-active{
+    color: $purple-secondary;
+    cursor: default;
+}
+
+.breadcrumb-state-not_active{
+    color: $darkblueop60;
+    &:hover{
+        text-decoration: underline;
+        text-decoration-color: $darkblueop60;
+    };
+}
+
+.breadcrumb-separator{
+    margin: 0 5px;
+    color: $darkblueop60;
+    font-weight: 500;
+}

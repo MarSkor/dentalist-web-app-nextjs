@@ -113,6 +113,7 @@
 
 .article-wrapper{
     max-width: 950px;
+    margin-top: 50px;
     @include min-width(medium){
         margin: 70px auto;
     }

@@ -8,7 +8,7 @@ const Breadcrumb = ({ children }) => {
       return (
         <React.Fragment key={index}>
           {child}
-          <span>/</span>
+          <span className='breadcrumb-separator'>/</span>
         </React.Fragment>
       );
     }

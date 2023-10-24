@@ -16,36 +16,35 @@ const NextBreadcrumb = () => {
       pathArray.shift();
 
       pathArray = pathArray.filter((path) => path !== "");
-        
+
       const breadcrumbs = pathArray.map((path, index) => {
         const href = "/" + pathArray.slice(0, index + 1).join("/");
+        
+        // removing the "-" from the path that comes from the mdx files
+        const newLabel = path.replace(/-/g, " ");
+
         return {
           href,
-          label: path.charAt(0).toUpperCase() + path.slice(1),
+          label: newLabel.charAt(0).toUpperCase() + newLabel.slice(1),
           isCurrent: index === pathArray.length - 1,
         };
       });
       setBreadcrumbs(breadcrumbs);
-  }, [router.asPath]);
+  }, [router]);
   
   return (
-    <>
-      <Breadcrumb>
-        {/* <BreadcrumbItem isCurrent={router.pathname === "/blog"} href="/blog">
-          Home
-        </BreadcrumbItem> */}
-        {breadcrumbs &&
-          breadcrumbs.map((breadcrumb) => (
-            <BreadcrumbItem
-              key={breadcrumb.href}
-              href={breadcrumb.href}
-              isCurrent={breadcrumb.isCurrent}
-            >
-              {breadcrumb.label}
-            </BreadcrumbItem>
-          ))}
-      </Breadcrumb>
-    </>
+  <Breadcrumb>
+    {breadcrumbs &&
+      breadcrumbs.map((breadcrumb) => (
+      <BreadcrumbItem
+      key={breadcrumb.href}
+      href={breadcrumb.href}
+      isCurrent={breadcrumb.isCurrent}
+      >
+        {breadcrumb.label}
+      </BreadcrumbItem>
+    ))}
+  </Breadcrumb>
   );
 }
 
