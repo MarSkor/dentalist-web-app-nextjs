@@ -1,0 +1,45 @@
+@use "../abstracts/index" as *;
+
+.contactus-colorbg{
+    background-image: url(/assets/contact/background.svg);
+    background-repeat: no-repeat;
+    border-radius: $border-radius-lg;
+    .heading--center{
+        max-width: 550px;
+        margin: 0px auto;
+        padding-top: 50px;
+    }
+}
+
+.contactus-form-wrap{
+    background-color: $white;
+    max-width: 840px;
+    margin: 0 auto;
+    border-radius: $border-radius-lg;
+    
+    form{
+        padding: 20px;
+        @include min-width(medium){
+            padding: 30px 60px;
+        }
+    }
+}
+
+
+.ourclinic{
+   .ourclinic--card-wrap{
+
+    margin-top: $margin-50;
+    @include min-width(medium){
+        gap: 40px;
+        margin-top: $margin-90;
+    }
+
+    & > .card--wOutline{
+        @include max-width(mx-medium){
+            margin-bottom: 40px;
+        }
+    }
+   }   
+}
+

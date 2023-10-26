@@ -7,6 +7,7 @@ const Card = (props) => {
   // - wicon-x
   // - default
   // - horizontal
+  // - wOutline
 
   return (
     <div className={classNames}>

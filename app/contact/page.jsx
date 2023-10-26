@@ -1,9 +1,12 @@
-import React from 'react'
+import { Hero, OurClinic } from "@/components/contact"
 
-const page = () => {
+const ContactUs = () => {
   return (
-    <div>page</div>
+    <>
+      <Hero />
+      <OurClinic/>
+    </>
   )
 }
 
-export default page
+export default ContactUs
