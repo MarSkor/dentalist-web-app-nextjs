@@ -1,35 +1,69 @@
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
- }
- 
- .pageLink {
-  cursor: pointer;
- }
- 
- /* pagination pageItem */
- .pageItem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  border: 1px solid #eaeaea;
-  border-radius: 0.5rem;
-  cursor: pointer;
- }
- 
- /* pagination page item when active */
- .pageItemActive {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  border: 1px solid #eaeaea;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  background-color: red;
- }
+@use "../abstracts/index" as *;
+
+
+
+.pagination-wrapper {
+    padding-inline-start: 0;
+    @include flex-center;
+    justify-content: center;
+    margin: $margin-90 0;
+    gap: 20px;
+}
+
+.pagination-item, 
+.pagination-dots, 
+.pagination-item-link{
+    cursor: pointer;
+    list-style: none;
+    border-radius: $border-radius-xs;
+    border: 1px solid $purpleop;
+
+    @include flex-jus-center;
+    font-weight: 700;
+    transition: .2s ease;
+
+    height: 44px;
+    width: 44px;
+    @include min-width(medium){
+        height: 64px;
+        width: 64px;
+    }
+    &:hover{
+        background-color: $purple-light;
+        color: $darkblue;
+    }
+}
+
+.pagination-item-link{
+    background-color: $white;
+    border: 1px solid $purpleop;
+    text-decoration: none;
+    color: $darkblue;
+    @include flex-jus-center;
+}
+
+.pagination-itemDisabled{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.pagination-itemActive a{
+    background-color: $purple;
+    color: $white;
+}
+
+
+.pagination-mobile{
+    @include flex-jus-center;
+    border-radius: $border-radius-xs;
+    border: 1px solid $purpleop;
+
+
+    &__page-field{
+        margin: 0 20px;
+        @include flex-jus-center;
+        & > p {
+            margin: 0px 5px;
+        }
+    }
+}

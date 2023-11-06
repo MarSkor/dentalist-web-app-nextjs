@@ -5,7 +5,7 @@ import { Container } from "@/components/layout"
 import { ArticleAuthor, ArticleTitle } from "@/components/article";
 import { LatestNews } from "@/components/blog";
 import * as components from "@/components/mdx";
-import { NextBreadcrumb, ScrollButton } from "@/components/elements";
+import { NextBreadcrumb } from "@/components/elements";
 
 import { getPostMetadata, getPostContent } from "@/lib/getPosts"
 

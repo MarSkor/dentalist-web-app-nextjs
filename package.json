@@ -11,13 +11,13 @@
   "dependencies": {
     "@next/mdx": "^13.5.4",
     "eslint": "8.49.0",
-    "eslint-config-next": "13.5.2",
+    "eslint-config-next": "^14.0.1",
     "framer-motion": "^10.16.4",
     "gray-matter": "^4.0.3",
-    "next": "13.5.2",
+    "next": "^14.0.1",
     "next-mdx-remote": "^4.4.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-select": "^5.7.7"
   },
   "devDependencies": {
