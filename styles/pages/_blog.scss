@@ -20,26 +20,24 @@
     a{
         text-decoration: none;
     }
-    cursor: pointer;
-    width: 100%;
+
     max-width: 400px;
-    max-height: 480px;
-    height:  480px;
     border: 1px solid $darkblueop10;
     border-radius: $border-radius-m;
-    padding: 16px;
+    padding: 16px 16px 20px;
     transition: all 350ms ease-in-out;
 
     &__image-wrap{
         position: relative;
-        margin-bottom: 24px;
-
+        margin: 0 auto 24px;
+        max-width: 400px;
+        max-height: 480px;
         img{
             width: 100%;
             height: auto;
-            background-size: cover;
         }
     }
+
     &__date{
         background-color: $white;
         position: absolute;
@@ -61,8 +59,9 @@
         }
     }
     &__content{
+        
         h5{
-            margin: 4px 0 6px;
+            padding: 6px 0 8px;
         }
         
         .p-16{
@@ -80,6 +79,10 @@
                 padding: 5px 10px;
                 margin-bottom: 0;
             }
+        }
+
+        &--readmore{
+            text-align: right;
         }
     }
 
@@ -109,7 +112,7 @@
 }
 
 
-// ARTICLE PAGE
+// ARTICLE PAGE (blog specific page)
 
 .article-wrapper{
     max-width: 950px;
@@ -132,5 +135,70 @@
                 color: $darkblueop60;
             }
         }
+    }
+}
+
+
+// CATEGORY
+.blog_link_categories{
+    margin: 20px 0;
+    @include flex-jus-center;
+    
+    a{
+        font-size: clamp(1rem, 3vw, 1.125rem);
+        @include flex-jus-center;
+        text-decoration: none;
+        color: $purple;
+        background-color: $purple-light;
+        padding: 10px 20px;
+        border-radius: $border-radius-xs;
+        font-weight: 500;
+
+        svg{
+            margin-left: 4px;
+        }
+    }
+}
+
+
+.categories{
+    // large screens
+    @include min-width(medium){
+        @include flex-center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 40px 0;
+    }
+
+    // small screens - horizontal scroll
+    @include max-width(mx-medium){
+        margin: 20px 0 0;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .category{
+        text-decoration: none;
+        background-color: $purple-light;
+        padding: 8px 18px;
+        border-radius: $border-radius-xs;
+        font-weight: 500;
+        @include max-width(mx-medium){
+            display: inline-block;
+            margin-right: 10px ;
+        }
+    }
+
+    .category.active{
+        color: $white;
+        background-color: $purple;
+        font-weight: bold;
+        box-shadow: $box-sh-sm;
+        box-shadow: 0px 5px 20px 0px rgb(80, 57, 172, 0.1);
     }
 }

@@ -20,7 +20,7 @@ export const monthFix = (a) => {
 export const formattedDate = (date) => {
     return new Intl.DateTimeFormat('en-GB', {
         day: '2-digit',
-        month: 'long',
-        year: 'numeric'
+        month: 'numeric',
+        year: '2-digit'
     }).format(new Date(date))
 }

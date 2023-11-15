@@ -15,6 +15,7 @@
     max-width: 860px;
     text-align: center;
     margin: 0 auto;
+    
     h3{
         margin-bottom: 30px;
     }
@@ -70,6 +71,9 @@
         flex-direction: column;
         justify-content: center;
         height: 100%;
+        @include max-width(mx-medium){
+            padding: 60px 0 24px 0;
+        }
     }
 
     .card-group-wicony{
@@ -79,14 +83,12 @@
         }
 
         & > *{
-          margin: 0 0 72px;
+            margin: 0 0 36px;
+          @include min-width(medium){
+            margin: 0 0 72px;
+          }
         }
     }
-
-    &__heading{
-        padding: 20px 0 0 0;
-    }
-
 }
 
 .experts{

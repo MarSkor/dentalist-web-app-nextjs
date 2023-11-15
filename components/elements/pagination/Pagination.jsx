@@ -7,7 +7,8 @@ import { NavArrowRight, NavArrowLeft } from 'iconoir-react';
 
 
 const Pagination = props => {
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 970);
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 970
+  const [isDesktop, setDesktop] = useState(!isMobile);
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 970);
@@ -20,13 +21,7 @@ const Pagination = props => {
     }
   });
 
-
-  const {
-    totalCount,
-    siblingCount = 1,
-    currentPage,
-    pageSize,
-  } = props;
+  const { totalCount, siblingCount = 1, currentPage, pageSize } = props;
 
   const paginationRange = usePagination({
     currentPage,

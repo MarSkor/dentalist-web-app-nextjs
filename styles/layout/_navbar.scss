@@ -5,6 +5,9 @@
     @include min-width(medium){
         height: 70px;
     }
+    @include max-width(mx-medium){
+        box-shadow:  $box-sh-nav;
+    } 
 }
 
 .nav{
@@ -22,9 +25,7 @@
         transition: all 1s;
     } 
 
-    @include max-width(mx-medium){
-        box-shadow:  $box-sh-nav;
-    } 
+   
     
     &__scroll{
         @include min-width(medium){
@@ -129,7 +130,6 @@
             > a{
                 margin-bottom: 30px;
                 padding: 20px 40px;
-                width: 100%;
             }
         }
     }
