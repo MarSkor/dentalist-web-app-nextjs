@@ -15,11 +15,13 @@
     "framer-motion": "^10.16.4",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
+    "hamburger-react": "^2.5.0",
     "next": "^14.0.1",
     "next-mdx-remote": "^4.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-select": "^5.7.7"
+    "react-select": "^5.7.7",
+    "react-use": "^17.4.0"
   },
   "devDependencies": {
     "iconoir-react": "^6.11.0",
@@ -31,9 +33,6 @@
     "next/core-web-vitals",
     "eslint:recommended"
   ],
-  "globals": {
-    "React": "readonly"
-  },
   "rules": {
     "no-unused-vars": "warn"
   },

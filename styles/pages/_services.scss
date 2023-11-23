@@ -7,9 +7,10 @@
     .hero__heroimgwrap{
 
         img{
+            margin-bottom: -50px;
             @include min-width(large){
-                position: absolute;
-                bottom: -100px;
+                // position: absolute;
+                margin-bottom: -100px;
                 right: 20px;
             }
         };

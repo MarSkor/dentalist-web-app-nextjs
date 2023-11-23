@@ -1,5 +1,9 @@
 @use "../abstracts/index" as *;
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -9,10 +13,11 @@ body{
 
 main {
     flex-grow: 1;
-    margin-top: 90px;
+    margin-top: 70px;
     @include min-width(medium){
         margin-top: 100px;
     }
+    overflow: hidden;
 }
 
 .section, .header{

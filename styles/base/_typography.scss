@@ -15,61 +15,61 @@ h1, h2, h3, h4, h5, p, .p-date{
 }
 
 h1{
-    --min: 1.75em; /* minimum value */
+    --min: 1.75rem; /* minimum value */
     --val: 5vw; /* preferred value = 5% viewport width */
-    --max: 3em; /* maximum value */
+    --max: 3rem; /* maximum value */
 }
 
 h2{
-    --min: 1.5em;
+    --min: 1.5rem;
     --val: 4vw;
-    --max: 2.375em
+    --max: 2.375rem
 }
 
 h3{ 
-    --min: 1.125em;
+    --min: 1.125rem;
     --val: 3vw;
-    --max: 2.25em;
+    --max: 2.25rem;
 }
 
 h4{
-    --min: 1.125em;
+    --min: 1.125rem;
     --val: 3vw;
-    --max: 1.25em;
+    --max: 1.25rem;
 }
 
 h5{
-    --min: 1em;
+    --min: 1rem;
     --val: 3vw;
-    --max: 1.125em;
+    --max: 1.125rem;
 }
 
 p{
-    --min: 1em;
+    --min: 1rem;
     --val: 3vw;
-    --max: 1.125em;
+    --max: 1.125rem;
 }
 
 .p-18{
-    --min: 1em;
+    --min: 1rem;
     --val: 2.5vw;
-    --max: 1.125em;
+    --max: 1.125rem;
 }
 
 .p-16{
     font-weight: 500;
     line-height: 26px;
-    --min: 0.875em;
+    --min: 1rem;
     --val: 2.5vw;
-    --max: 1em;
+    --max: 1rem;
 
 }
 
 .p-date{
     font-weight: 500;
-    --min: 1em;
+    --min: 1rem;
     --val: 3vw;
-    --max: 1em;
+    --max: 1rem;
 }
 
 .label-12, .label-14{
@@ -77,11 +77,11 @@ p{
 }
 
 .label-14{
-    font-size: 0.875em; 
+    font-size: 0.875rem; 
 }
 
 .label-12{
-    font-size: 0.75em; 
+    font-size: 0.75rem; 
     color: $purple;
     font-weight: 700;
     text-transform: uppercase;

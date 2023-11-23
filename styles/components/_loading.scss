@@ -1,0 +1,12 @@
+@use "../abstracts/index" as *;
+
+.threedotsloading{
+    padding: 180px 0 0;
+    width: 100%;
+    @include flex-jus-center;
+    flex-direction: column;
+   
+    &__dots{
+        margin-top: 40px;
+    }
+}

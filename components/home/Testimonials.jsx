@@ -1,9 +1,11 @@
 "use client";
 import React from "react";
-import { Container } from "../layout"
-import { SectionWTextOnly } from "../common/SectionWRow"
-import { TESTIMONIALS } from "@/utils/data"
 import Image from "next/image";
+import { Container } from "../layout"
+import { TESTIMONIALS } from "@/utils/data"
+import { motion } from "framer-motion"
+import { fadeIn, textVariant } from "@/utils/motions";
+import { MotionRow } from "../common/motion/MotionBlog";
 
 const TestimonialCard = (props) => {
   const totalStars = 5;
@@ -34,17 +36,28 @@ const TestimonialCard = (props) => {
 }
 
 const Testimonials = () => {
-
   return (
     <Container tag="section" variant="xxl" className="testimonials">
-      <div className="testimonials__wrapper">
-        <SectionWTextOnly 
-        colPosition="left"
-        label="testimonial"
-        title="What people have said about us"
-        text="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts"
-        />
-        <div className="testimonials__card-group">
+      <MotionRow
+      className="testimonials__wrapper"
+      >
+        <div className="SectionWTextOnly">
+          <div className="SectionWTextOnly__row rowPosition-left">
+            <div className="SectionWTextOnly__row--col__heading">
+              <motion.p variants={textVariant(0.4)} className="label-12">Testimonial</motion.p>
+              <motion.h2 variants={textVariant(0.4)}>What people have said about us</motion.h2>
+            </div>
+
+            <div className="SectionWTextOnly__row--col__text">
+              <motion.p variants={textVariant(0.4)} className="p-18">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts</motion.p>
+            </div>
+          </div>
+        </div>
+
+        <motion.div 
+        variants={fadeIn("up", "tween", 0.5, 1)}
+        className="testimonials__card-group"
+        >
          {TESTIMONIALS.map((item, index) => (
           <TestimonialCard 
           key={item.id}
@@ -54,8 +67,8 @@ const Testimonials = () => {
           text={item.text}
           />
          ))}
-        </div>
-      </div>
+        </motion.div>
+      </MotionRow>
     </Container>
   )
 }

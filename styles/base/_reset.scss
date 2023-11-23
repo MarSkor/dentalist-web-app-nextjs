@@ -24,6 +24,7 @@ picture {
 /* 3. Allow percentage-based heights in the application */
 html, body {
     min-height: 100vh;
+    min-height: 100svh;
 }
 
 /* Typographic tweaks!

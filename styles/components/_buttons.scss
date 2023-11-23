@@ -58,14 +58,16 @@ button, .btn{
   
 .btn--md {
     font-size: 14px;
-    padding: 15px 25px;
+    padding: 12px 18px;
 }
   
 .btn--lg {
     font-size: 16px;
-    padding: 20px 39px;
+    padding: 16px 39px;
+
     @include min-width(medium){
         max-width: 240px;
+        padding: 20px 39px;
     }
 }
 

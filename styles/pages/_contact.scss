@@ -18,9 +18,9 @@
     border-radius: $border-radius-lg;
     
     form{
-        padding: 20px;
+        padding: 25px 20px;
         @include min-width(medium){
-            padding: 30px 60px;
+            padding: 40px 60px;
         }
     }
 }

@@ -1,8 +1,16 @@
 'use client'
 import Link from "next/link"
-import { IconoirProvider, Twitter, Facebook, Instagram } from "iconoir-react"
-import { FOOTER_DATA } from "./data"
-import { Container } from "."
+import { 
+  IconoirProvider, 
+  Twitter, 
+  Facebook, 
+  Instagram 
+} from "iconoir-react"
+import { 
+  FOOTER_DATA_CONTACT_INFORMATION, 
+  FOOTER_DATA_LINKS 
+} from "./data"
+
 
 const Footer = () => {
   return (
@@ -11,7 +19,12 @@ const Footer = () => {
           <div className="footer__row">
             <div className="footer__col">
               <div className="footer__col--content">
-                <img className="footer__col--logo" src="/assets/footer/Footer__logo.svg" alt="logo" loading="lazy"/>
+                <img 
+                className="footer__col--logo" 
+                src="/assets/footer/Footer__logo.svg" 
+                alt="logo" 
+                loading="lazy"
+                />
                 <p className="p-18">Dental Care Seattle is a top-rated local practice for cosmetic, preventative, and restorative dentistry on First Hill</p>
               </div>
               <div className="footer__col--content">
@@ -33,7 +46,7 @@ const Footer = () => {
             <div className="footer__col">
               <div className="footer__col--content__links">
                 <p className="label-12">Quick Links</p>
-                {FOOTER_DATA[1]?.links.map((link, index) => (
+                {FOOTER_DATA_LINKS.map((link, index) => (
                   <Link key={index} className="label-14" href={link.value}>
                     {link.link_text}
                   </Link>
@@ -43,7 +56,7 @@ const Footer = () => {
 
             <div className="footer__col">
               <p className="label-12">Contact & Information</p>
-              {FOOTER_DATA[0]?.contact_information.map((item, index) => (
+              {FOOTER_DATA_CONTACT_INFORMATION.map((item, index) => (
                 <div key={index} className="footer__col--info-group">
                   <img src={item.icon} alt="number"/>
                   <div>

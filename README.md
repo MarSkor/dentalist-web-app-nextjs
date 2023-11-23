@@ -5,3 +5,5 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 The design was found here --> [link to design](https://ui8.net/edzjey-store/products/dental-landing-page)
 
 Under development.
+
+![The Website](/Screenshot_1.png)

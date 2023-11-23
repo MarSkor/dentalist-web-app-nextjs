@@ -33,19 +33,18 @@ const Post = async({ params }) => {
       <NextBreadcrumb/>
       <article className="article article-wrapper">
         <header className="article__meta">
-            <ArticleTitle 
-              category={source.data.category} 
-              title={source.data.title}
-            />
-            <ArticleAuthor 
-              date={source.data.date} 
-              author={source.data.author} 
-              author_image={source.data.author_image}
-            />
+          <ArticleTitle 
+          category={source.data.category} 
+          title={source.data.title}
+          />
+          <ArticleAuthor 
+          date={source.data.date} 
+          author={source.data.author} 
+          author_image={source.data.author_image}
+          />
         </header>
         <MDXRemote source={source.content} components={components}/>
       </article>
-    
       <LatestNews/>
     </Container>
   )

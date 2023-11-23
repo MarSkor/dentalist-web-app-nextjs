@@ -1,3 +1,5 @@
+@use "../abstracts/index" as *;
+
 // default
 .heading--left{
     text-align: left;
@@ -9,4 +11,27 @@
 
 .heading--right{
     text-align: right;
+}
+
+.heading--res{
+    @include full-res-flex;
+    margin-bottom: $margin-20;
+
+    @include min-width(medium){
+        justify-content: space-between;
+        margin-bottom: $margin-90;
+    }
+
+    h2{
+        max-width: $text-width-550;
+    }
+
+    p{
+        max-width: $text-width-550;
+        margin-top: 10px;
+        
+        @include min-width(medium){
+            margin-top: 20px;
+        }
+    }
 }

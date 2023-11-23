@@ -5,9 +5,10 @@ import { Heading } from "@/components/common";
 import { BlogPost, HeroHeading } from "@/components/blog";
 import { Pagination } from "@/components/elements";
 import { ArrowRight } from "iconoir-react";
+import { MotionRowOnce } from "@/components/common/motion/MotionBlog";
 
 
-const Blog = ({ params, searchParams }) => {
+const Blog = ({ searchParams }) => {
   const page =  typeof searchParams.page === "string" ? +searchParams.page : 1;
  
   // blog posts to show per page
@@ -28,23 +29,28 @@ const Blog = ({ params, searchParams }) => {
     <>
     <HeroHeading />
     <Container tag="section" variant="lg">
-      <Heading 
-      variant="center" 
-      headingLevel="h2" 
-      headingText="Stay updated with our latest news"
-      />
-      <div className="blog_link_categories">
-        <Link href={`/blog/categories/all`}>View blog categories <ArrowRight/></Link>
-      </div>
-
-      <div className="blogpostcard--wrapper">
+      <MotionRowOnce>
+        <Heading 
+        variant="center" 
+        headingLevel="h2" 
+        headingText="Stay updated with our latest news"
+        />
+        <div className="blog_link_categories">
+          <Link href={`/blog/categories/all`}>View blog categories <ArrowRight/></Link>
+        </div>
+      </MotionRowOnce>
+  
+      <MotionRowOnce
+      className="blogpostcard--wrapper"
+      >
         {paginatedPosts?.map(post => (
           <BlogPost 
           key={post.slug}
           post={post}
           />
         ))}
-      </div>
+      </MotionRowOnce>
+
       <Pagination
       currentPage={page}
       totalCount={allBlogPosts.length}

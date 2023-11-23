@@ -13,7 +13,10 @@ const Card = (props) => {
     <div className={classNames}>
       <div className={`card--${props.variant}__wrapper`}>
         {props.image && (
-          <div className={`card--${props.variant}__image-wrap`}>
+          <div 
+          className={`card--${props.variant}__image-wrap`}
+          style={{backgroundColor: `${props.color}`}}
+          >
             <img
             src={props.image}  
             alt={props.title}

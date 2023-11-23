@@ -22,31 +22,6 @@
 }
 
 .services{
-
-    &__heading{
-        &--text{
-            @include full-res-flex;
-            margin-bottom: $margin-20;
-
-            @include min-width(medium){
-                justify-content: space-between;
-                margin-bottom: $margin-90;
-            }
-
-            h2{
-                max-width: $text-width-550;
-            }
-
-            p{
-                max-width: $text-width-550;
-                margin-top: 10px;
-                @include min-width(medium){
-                    margin-top: 20px;
-                }
-            }
-        }
-    }
-
     .card-group{
         justify-content: space-between;
     }
@@ -152,9 +127,9 @@
     &__wrapper{
         margin: 0 auto;
         max-width: $container;
-        padding: 20px 0px;
+        padding: 40px 0px;
         @include min-width(medium){
-            padding: 60px 0px;
+            padding: 60px 20px;
         }
     }
 
@@ -174,6 +149,7 @@
             margin: 40px 0;
             @include min-width(medium){
                 margin: 10px 0;
+                padding: 0 10px;
             }
         }
     }
@@ -185,7 +161,7 @@
             background-color: $white;
             border-radius: $border-radius-m;
             width: 100%;
-            max-width: 400px;
+            max-width: 360px;
             @include flex-column;
             align-items: center;
             padding: 0 39px 48px;

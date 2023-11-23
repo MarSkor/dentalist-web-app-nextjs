@@ -1,9 +1,10 @@
     // colors
     $purple-light: rgb(238, 236, 248);
-    $purple: rgb(80, 57, 172);
-    $purple-secondary: rgb(123, 85, 236);
+    $purple: #5039ac;
+    $purple-secondary: #7b55ec;
+    $purple-tertiary: #5423E7;
     $purpleop: rgba(87, 62, 187, 0.1);
-    $white: rgb(248, 248, 248);
+    $white: #f8f8f8;
     $whiteop60: rgba(248, 248, 248, 0.6);
     $darkblue: rgb(24, 25, 68);
     $darkestblue: rgb(4, 20, 52);
@@ -51,4 +52,4 @@
 
     // shadows
     $box-sh-sm: 0px 54px 76px 0px rgba(24,25,69,0.08);
-    $box-sh-nav: 0px 4px 10px 0px rgba(178, 178, 178, 0.189);
+    $box-sh-nav: 0px 4px 14px 0px rgba(135, 135, 135, 0.072);
