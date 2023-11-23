@@ -6,4 +6,4 @@ The design was found here --> [link to design](https://ui8.net/edzjey-store/prod
 
 Under development.
 
-![The Website](/Screenshot_1.png)
+![The Website](./public/assets/Screenshot_1.png)
