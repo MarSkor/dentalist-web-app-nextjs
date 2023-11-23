@@ -7,7 +7,7 @@
     @include flex-center;
     position: fixed;
     width: 100%;
-    z-index: 999;
+    z-index: 998;
     top: 0;
     height: 56px;
 
@@ -37,9 +37,11 @@
     }
 
     &__toggle{
+        z-index: 999;
         @include min-width(medium){
             display: none
         }
+
         div{
             margin-right: -8px;
         }
@@ -55,13 +57,13 @@
     &__menu{
         @include flex-column;
         position: fixed;
-        top: 56px;
+        top: 0px;
         width: 65%;
         row-gap: 24px;
         //direction of the navbar on smaller devices
         right: -100%;
         transition: all 0.2s;
-        min-height: calc(100svh - 56px);
+        min-height: calc(100svh - 0px);
         background-color: $white;
         padding: 0 16px;
 
@@ -75,8 +77,6 @@
             align-items: center;
         } 
 
-
-
         &--list{
             list-style: none;
             display: flex;
@@ -85,6 +85,7 @@
                 flex-direction: column;
                 text-align: center;
                 padding-inline-start: 0;
+                margin-top: 70px
             }
 
             @include min-width(medium){
@@ -113,7 +114,7 @@
                     height: 1px;
                     display: block;
                     transition: all 0.3s ease;
-                    bottom: -5px;
+                    bottom: -2px;
                 }
     
                 &:hover::after {
@@ -124,6 +125,10 @@
             }
 
             a{
+                @include max-width(mx-medium){
+                    padding: 20px 60px;
+                }
+
                 text-decoration: none;
                 color: $darkblue;
                 font-weight: 700;
@@ -135,7 +140,6 @@
                 &.active{
                     color: $purple-tertiary;
                 }
-                
             }
         }
 

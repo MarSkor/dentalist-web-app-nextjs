@@ -6,9 +6,10 @@
     }
 }
 
-
 section.about_safety{
-    margin-bottom: 300px;
+    @include min-width(medium){
+        margin-bottom: 300px;
+    }
 }
 
 .about_safety{

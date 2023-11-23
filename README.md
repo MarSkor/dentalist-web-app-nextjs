@@ -7,4 +7,4 @@ The design was found here --> [link to design](https://ui8.net/edzjey-store/prod
 ~~Under development.~~
 Finished 23.11.2023 ✅ (improvements/adjustments can happen)
 
-![The Website](./public/assets/Screenshot_1.png)
+![The Website](./public/Screenshot_1.png)
